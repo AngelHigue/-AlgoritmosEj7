@@ -26,6 +26,9 @@ public class Controller {
     BinarySearchTree treeES = new BinarySearchTree();
     BinarySearchTree treeFR = new BinarySearchTree();
 
+    /**
+     * Empieza con la ejecucion del programa
+     */
     public void ejecutar() {
 
         Boolean activo = true;
@@ -56,7 +59,6 @@ public class Controller {
     /*
      * Lee el arhivo con las palabras y sus traducciones para crear sus respecivos
      * arboles
-     * 
      */
     public void leerArchivo() {
 
@@ -100,6 +102,10 @@ public class Controller {
 
     }
 
+
+    /**
+     * Imprime en consola la coleccion de palabras en el idioma inidicado
+     */
     public void mostrarColeccion() {
         vista.print("\n :: MOSTRAR COLECCION DE PALABRAS :\n");
 
@@ -125,9 +131,11 @@ public class Controller {
 
         pressAnyKeyToContinue();
 
-
     }
 
+    /**
+     * Lee el archivo indicado y lo traduce dependiendo de su idioma de entrada y salida
+     */
     public void traducirTexto() {
 
         vista.print("\n :: TRADUCIR TEXTO ::");
@@ -213,13 +221,13 @@ public class Controller {
 
     }
 
-     /*
+    /*
      * Espera a que el usuario presione una tecla para continuar la ejecución
      */
     public void pressAnyKeyToContinue() {
         String seguir;
         Scanner teclado = new Scanner(System.in);
-       vista.printSucc("[] Presiona enter para continuar ...");
+        vista.printSucc("[] Presiona enter para continuar ...");
         try {
             seguir = teclado.nextLine();
         } catch (Exception e) {
